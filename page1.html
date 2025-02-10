@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>모바일 단말 현황</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+        .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+        .product {
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 15px;
+            transition: transform 0.3s;
+        }
+        .product:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        @media (max-width: 600px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>휴대폰 쇼핑몰</h1>
+    <div class="container">
+        <div class="product">
+            <img src="img/s24.png" alt="Galaxy S24">
+            <h2>Galaxy S24</h2>
+            <p>고성능 카메라와 강력한 배터리</p>
+            <img src="https://via.placeholder.com/100?text=QR+S24" alt="QR 코드">
+        </div>
+        <div class="product">
+            <img src="https://via.placeholder.com/200" alt="Galaxy S23">
+            <h2>Galaxy S23</h2>
+            <p>매끄러운 디자인과 빠른 성능</p>
+            <img src="https://via.placeholder.com/100?text=QR+S23" alt="QR 코드">
+        </div>
+        <div class="product">
+            <img src="https://via.placeholder.com/200" alt="Galaxy S22">
+            <h2>Galaxy S22</h2>
+            <p>합리적인 가격과 안정적인 성능</p>
+            <img src="https://via.placeholder.com/100?text=QR+S22" alt="QR 코드">
+        </div>
+    </div>
+</body>
+</html>

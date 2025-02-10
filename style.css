@@ -1,0 +1,272 @@
+/* 기본 스타일 */
+
+@font-face {
+    font-family: 'GmarketSansMedium';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    text-align: center;
+    font-family: 'GmarketSansMedium', sans-serif;
+
+
+}
+
+.highlight {
+    color: red;
+    font-weight: bold;
+}
+
+.container {
+    width: 80%;
+    display: inline-block;
+}
+
+button {
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    cursor: pointer;
+    font-family: 'GmarketSansMedium', sans-serif;
+    font-size: 17px;
+}
+input{
+    padding: 10px 20px;
+    margin: 5px;
+    border: 1px solid rgb(109, 109, 109);
+    cursor: pointer;
+    font-family: 'GmarketSansMedium', sans-serif;
+    font-size: 17px;
+}
+nav button {
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    cursor: pointer;
+    font-family: 'GmarketSansMedium', sans-serif;
+    font-size: 17px;
+}
+
+.active {
+    background-color: red;
+    color: white;
+}
+
+.tab-content {
+    display: none;
+
+}
+
+.tab-content:not(.hidden) {
+    display: block;
+}
+
+.circle {
+    display: inline-flex;
+    width: 70px;
+    height: 70px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: gray;
+    color: white;
+    font-size: 0.8rem;
+    margin: 10px;
+    cursor: pointer;
+}
+
+
+.category {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+
+}
+
+.itembox {
+    height: 100%;
+    width: 25%;
+    /* 2 items per row */
+    padding: 10px;
+    box-sizing: border-box;
+    color: #000;
+    text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+    cursor: pointer;
+}
+
+.itembox:hover {
+    transform: scale(1.05);
+    /* Slightly enlarges the box */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    /* Adds a soft shadow */
+    background-color: rgba(0, 0, 0, 0.05);
+    /* Light background change */
+}
+
+.itembox:active {
+    transform: scale(0.95);
+    /* Slightly shrinks on click to give press effect */
+}
+
+.itemtext {
+    margin-bottom: 15px;
+    font-size: 17px;
+}
+
+.fit-picture {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    /* Maintain a fixed aspect ratio (1:1) */
+    object-fit: cover;
+    /* Ensure image fits within the box */
+}
+
+.model-name {
+    padding-bottom: 3px;
+    font-size: 18px;
+    color: #1f1d1d;
+    border-bottom: 2px solid #b8b8b8;
+}
+
+
+.red {
+    background-color: red;
+}
+
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    background-color: antiquewhite;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    padding: 15px;
+    z-index: 1000;
+}
+
+.popup.hidden {
+    display: none;
+}
+
+.popup-content {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+
+/* 탭 상단 버튼 스타일 */
+.tab-buttons {
+    display: flex;
+    justify-content: center;
+    border-bottom: 2px solid #f44336;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.tab-button {
+    padding: 10px 20px;
+    margin: 0 5px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    background-color: #f0f0f0;
+    border-radius: 5px 5px 0 0;
+    transition: background-color 0.3s;
+}
+
+.tab-button.active {
+    background-color: #f44336;
+    color: white;
+}
+
+/* 탭 내용 박스 스타일 */
+.ptab-content {
+    display: none;
+    padding: 10px;
+    background-color: white;
+    /* border: 1px solid #ccc; */
+    border-top: none;
+    border-radius: 0 0 5px 5px;
+}
+
+.ptab-content.active {
+    display: block;
+}
+
+.fit-picture {
+    width: 100%;
+    height: 100%;
+}
+
+#popupPolicy {
+    color: rgb(16, 20, 255);
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    /* 반투명 검은색 */
+    z-index: 999;
+    /* 팝업보다 낮게 설정 */
+    display: none;
+    /* 기본적으로 숨김 */
+}
+
+/* 팝업이 나타날 때 오버레이 보이기 */
+.overlay.active {
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 100%;
+        display: inline-block;
+    }
+
+    .itembox {
+        width: 50%;
+        /* 4 items per row */
+        padding: 10px;
+        box-sizing: border-box;
+        padding-bottom: 25px;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .container {
+        width: 100%;
+        display: inline-block;
+    }
+
+    .itembox {
+        width: 50%;
+        /* 4 items per row */
+        padding: 10px;
+        box-sizing: border-box;
+        padding-bottom: 25px;
+    }
+
+    .popup {
+        width: 80%;
+    }
+}
