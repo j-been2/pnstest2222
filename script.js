@@ -130,3 +130,10 @@ function checkAccess() {
         alert("비밀번호가 틀렸습니다. 다시 입력하세요.");
     }
 }
+
+
+document.getElementById("userInput").addEventListener("keypress", function (event) {
+    if (event.key === "Enter") {
+        document.getElementById("checkAccessBtn").click();
+    }
+});

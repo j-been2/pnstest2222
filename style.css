@@ -269,4 +269,10 @@ nav button {
     .popup {
         width: 80%;
     }
+
+    .tab-button {
+        font-size: small;
+        padding: 10px 12px;
+    }
+
 }
